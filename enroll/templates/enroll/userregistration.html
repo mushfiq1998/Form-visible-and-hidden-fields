@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user registration </title>
+    </head>
+<body>
+    <form action="" method="get">
+        Get label name of form fields using for loop: 
+        {% for field in form %}
+            {{field.label}}
+        {% endfor %}<br>
+
+        Get label tags of form fields using for loop: 
+        {% for field in form %}
+            {{field.label_tag}}
+        {% endfor %}<br>
+
+         Get label and input tags of form fields using for loop:<br>
+        {% for field in form %}
+            {{field.label_tag}}
+            <!--Responsible for generating input tags-->
+            {{field}}<br>
+        {% endfor %}<br>
+
+        Get label and input tags of form fields using for loop:<br>
+        {% for field in form %}
+            {{field.label_tag}}
+            <!--Responsible for generating input tags-->
+            {{field}}<br>
+        {% endfor %}<br>
+
+        Get label and input tags of form fields using for loop:<br>
+        {% for field in form %}
+            {{field.label_tag}}
+            <!--Responsible for generating input tags-->
+            {{field}}<br>
+        {% endfor %}<br>
+
+        Get label and input tags of form visible fields using for loop:<br>
+        {% for field in form.visible_fields %}
+            {{field.label_tag}}
+            <!--Responsible for generating input tags-->
+            {{field}}<br>
+        {% endfor %}
+
+        {% for field in form.hidden_fields %}
+            {{field.label_tag}}
+            <!--Responsible for generating input tags-->
+            {{field}}<br>
+        {% endfor %}<br>
+
+        <i>Get label and input tags of form hidden fields 
+        using form_object.hidden_fields:</i>
+        {% for field in form.hidden_fields %}
+        <!--Generates label tag and returns label value-->
+        {{field.label_tag}}
+        <!--Responsible for generating input tags-->
+        {{field}}<br>
+    {% endfor %}<br>
+
+        <input type="submit" value="Submit">
+    </form><br>
+</body>
+</html>
